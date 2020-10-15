@@ -8,7 +8,10 @@ import * as styles from './Input.pcss';
 const cx = cn.bind(styles);
 
 export const Input: FunctionComponent<InputProps> = () => {
-    return <input className={cx('root')} type="text" placeholder="components"/>;
+    debugger;
+    console.log(styles);
+    //cx('root')
+    return <input className="" type="text" placeholder="components"/>;
 };
 
 export default Input;
