@@ -13,6 +13,8 @@ module.exports.resolve = {
 module.exports.output = {
     filename: 'index.js',
     path: path.resolve(root, 'dist'),
+    libraryTarget: "umd",
+    library: "components-selectapp-net"
 };
 
 module.exports.configModule = {
