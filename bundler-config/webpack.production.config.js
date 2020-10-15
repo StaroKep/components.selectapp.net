@@ -14,7 +14,13 @@ module.exports = () => ({
     entry,
     resolve,
     output,
-    module: configModule,
+    module: configModule({
+        cssLoader: {
+            options: {
+                localIdentName: 'CSN___[hash:base64]',
+            },
+        },
+    }),
     // plugins: [
     //     new HtmlWebpackPlugin({
     //         template: htmlTemplate,

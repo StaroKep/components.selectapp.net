@@ -13,5 +13,11 @@ module.exports = () => ({
     resolve,
     output,
     devtool: 'source-map',
-    module: configModule,
+    module: configModule({
+        cssLoader: {
+            options: {
+                localIdentName: 'components-selectapp-net__[name]__[local]____[hash:base64:5]',
+            },
+        },
+    }),
 });

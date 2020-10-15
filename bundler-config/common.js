@@ -12,12 +12,16 @@ module.exports.resolve = {
 
 module.exports.output = {
     filename: 'index.js',
-    path: path.resolve(root, 'dist'),
-    libraryTarget: "umd",
-    library: "components-selectapp-net"
+    path: root,
+    libraryTarget: 'umd',
+    library: 'components-selectapp-net',
 };
 
-module.exports.configModule = {
+module.exports.configModule = ({
+    cssLoader: {
+        options: { localIdentName },
+    },
+}) => ({
     rules: [
         {
             test: /\.ts|.tsx$/,
@@ -41,7 +45,7 @@ module.exports.configModule = {
                     loader: 'style-loader',
                     options: {
                         injectType: 'styleTag',
-                    }
+                    },
                 },
                 {
                     loader: 'css-loader',
@@ -49,7 +53,7 @@ module.exports.configModule = {
                         sourceMap: false,
                         modules: true,
                         importLoaders: 1,
-                        localIdentName: '[name]__[local]___[hash:base64:5]',
+                        localIdentName,
                     },
                 },
                 { loader: 'postcss-loader' },
@@ -67,4 +71,4 @@ module.exports.configModule = {
             ],
         },
     ],
-};
+});
