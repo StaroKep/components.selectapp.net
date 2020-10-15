@@ -1,7 +1,5 @@
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 /** Common config */
-const { entry, resolve, output, configModule, htmlTemplate } = require('./common');
+const { entry, resolve, output, configModule } = require('./common');
 
 console.log(`
     ----------
@@ -21,12 +19,6 @@ module.exports = () => ({
             },
         },
     }),
-    // plugins: [
-    //     new HtmlWebpackPlugin({
-    //         template: htmlTemplate,
-    //         // favicon: './src/assets/images/favicon.ico',
-    //     }),
-    // ],
     optimization: {
         minimize: true,
     },
