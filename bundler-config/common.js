@@ -35,7 +35,12 @@ module.exports.configModule = {
         {
             test: /\.pcss/,
             use: [
-                'style-loader',
+                {
+                    loader: 'style-loader',
+                    options: {
+                        injectType: 'styleTag',
+                    }
+                },
                 {
                     loader: 'css-loader',
                     options: {
