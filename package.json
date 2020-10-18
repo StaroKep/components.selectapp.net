@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --config bundler-config/webpack.development.config.js",
+    "build:dev": "webpack --config bundler-config/webpack.development.config.js",
     "build": "webpack --config bundler-config/webpack.production.config.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
