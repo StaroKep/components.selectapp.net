@@ -22,4 +22,5 @@ module.exports = () => ({
     optimization: {
         minimize: true,
     },
+    externals: ['react', 'react-dom'],
 });
