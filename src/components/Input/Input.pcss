@@ -46,7 +46,9 @@
     transition-duration: var(--main-transition-duration);
     transition-property: transform;
     border: 2px solid transparent;
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
+    pointer-events: none;
+    z-index: 1;
 
     &_offset {
         transform: translateY(calc(-3rem / 4));
