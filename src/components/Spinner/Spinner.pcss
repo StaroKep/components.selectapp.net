@@ -1,0 +1,51 @@
+:root {
+    --small-border-size: calc(1rem / 8);
+    --small-spinner-size: 1rem;
+
+    --medium-border-size: calc(1rem / 6);
+    --medium-spinner-size: 2rem;
+
+    --big-border-size: calc(1rem / 4);
+    --big-spinner-size: 3rem;
+}
+
+.root {
+    border-top: var(--medium-border-size) solid var(--main-black-color-10);
+    border-right: var(--medium-border-size) solid var(--main-black-color-10);
+    border-bottom: var(--medium-border-size) solid var(--main-hover-color);
+    border-left: var(--medium-border-size) solid var(--main-hover-color);
+    animation: rotation 1s infinite linear;
+    box-sizing: border-box;
+
+    &_size {
+        &_small {
+            border-width: var(--small-border-size);
+            width: var(--small-spinner-size);
+            height: var(--small-spinner-size);
+            border-radius: var(--small-spinner-size);
+        }
+
+        &_medium {
+            border-width: var(--medium-border-size);
+            width: var(--medium-spinner-size);
+            height: var(--medium-spinner-size);
+            border-radius: var(--medium-spinner-size);
+        }
+
+        &_big {
+            border-width: var(--big-border-size);
+            width: var(--big-spinner-size);
+            height: var(--big-spinner-size);
+            border-radius: var(--big-spinner-size);
+        }
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
