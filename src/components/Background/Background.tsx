@@ -9,15 +9,11 @@ import * as styles from './Background.pcss';
 const cx = cn.bind(styles);
 
 export const Background: FunctionComponent<BackgroundProps> = (props) => {
-    const { url, type = BackgroundType.DEFAULT, rootClassName } = props;
+    const { type = BackgroundType.DEFAULT, rootClassName } = props;
 
     const rootClassNames = cx('root', rootClassName, `root_type_${type}`);
 
-    const style: CSSProperties = {
-        backgroundImage: `url("${url}")`,
-    };
-
-    return <div className={rootClassNames} style={style} />;
+    return <div className={rootClassNames} />;
 };
 
 export default Background;

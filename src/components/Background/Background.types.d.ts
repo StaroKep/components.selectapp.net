@@ -1,6 +1,5 @@
 import { BackgroundType } from './Background.enums';
 export interface BackgroundProps {
-    url: string;
+    rootClassName: string;
     type?: BackgroundType;
-    rootClassName?: string;
 }

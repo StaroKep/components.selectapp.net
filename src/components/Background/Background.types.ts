@@ -1,8 +1,8 @@
 import { BackgroundType } from './Background.enums';
 
 export interface BackgroundProps {
-    url: string;
+    /** Set background-image prop in this class */
+    rootClassName: string;
 
     type?: BackgroundType;
-    rootClassName?: string;
 }
