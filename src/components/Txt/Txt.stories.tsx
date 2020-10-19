@@ -1,16 +1,20 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { Text, TextProps } from './index';
+import { Txt, TxtProps } from './index';
 
 export default {
-    title: 'Text',
-    component: Text,
+    title: 'Txt',
+    component: Txt,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
 } as Meta;
 
-const Template: Story<TextProps> = (args) => <Text {...args} />;
+const Template: Story<TxtProps> = (args) => (
+    <Txt {...args}>
+        Hello, how are you!? <br /> Привет, как дела!?
+    </Txt>
+);
 
 export const Primary = Template.bind({});
